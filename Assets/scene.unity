@@ -200,7 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHp: 10
   baseMp: 50
-  baseStr: 10
   starting_race: 0
   starting_klass: 0
 --- !u!4 &1342737801

@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class character : MonoBehaviour {
 
 
     public int baseHp = 10;
     public int baseMp = 50;
-    public int baseStr= 10;
     public Race starting_race;
     public Klass starting_klass;
 
-    private int hp;
-    private int mp;
-    private int str;
+    private int baseStr;
+    private int baseInt;
+    private int baseAgi;
+    private int agiGain;
+    private int strGain;
+    private int intGain;
+
     private Race race;
     private Klass klass;
 
@@ -22,9 +26,7 @@ public class character : MonoBehaviour {
 	{
 	    race = starting_race;
 	    klass = starting_klass;
-	    hp = baseHp;
-	    mp = baseMp;
-	    str = baseStr;
+	    Dictionary<string, int> wup = Utils.ReadAttributesFromJson(race.ToString());
 	}
 	
 	// Update is called once per frame
@@ -45,4 +47,4 @@ public class character : MonoBehaviour {
 
 public enum Klass {Rittari, Raiskari, Ryöväri, Runkkari};
 
-public enum Race {Valkonen, Kiinalainen, Neekeri, Homo };
+public enum Race {Ihminen, Haltija, Dwarf, Orc};
