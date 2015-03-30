@@ -47,4 +47,4 @@ public class character : MonoBehaviour {
 
 public enum Klass {Rittari, Raiskari, Ryöväri, Runkkari};
 
-public enum Race {Ihminen, Haltija, Dwarf, Orc};
+public enum Race {human, Haltija, Dwarf, Orc};
