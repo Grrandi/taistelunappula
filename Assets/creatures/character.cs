@@ -2,11 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class character : MonoBehaviour {
+public class character : MonoBehaviour
+{
 
+    private int hp;
+    private int mp;
 
     public int baseHp = 10;
+
     public int baseMp = 50;
+
     public Race starting_race;
     public Klass starting_klass;
 
@@ -36,6 +41,8 @@ public class character : MonoBehaviour {
 	    klassAttrs.TryGetValue("strGain", out strGain);
 	    klassAttrs.TryGetValue("intGain", out intGain);
 	    klassAttrs.TryGetValue("agiGain", out agiGain);
+	    hp = baseHp;
+	    mp = baseMp;
 
 	}
 	
@@ -52,6 +59,11 @@ public class character : MonoBehaviour {
     private double calc_damage()
     {
         return 0.0;
+    }
+
+    public int getHealth()
+    {
+        return hp;
     }
 }
 
