@@ -65,6 +65,11 @@ public class character : MonoBehaviour
     {
         return hp;
     }
+
+    public void takeHit(int amount)
+    {
+        hp = hp - amount;
+    }
 }
 
 public enum Klass {Rittari, Raiskari, Ryöväri, Runkkari};
