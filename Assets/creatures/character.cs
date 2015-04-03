@@ -26,7 +26,17 @@ public class character : MonoBehaviour {
 	{
 	    race = starting_race;
 	    klass = starting_klass;
-	    Dictionary<string, int> wup = Utils.ReadAttributesFromJson(race.ToString());
+	    Dictionary<string, int> raceAttrs = Utils.ReadAttributes(race.ToString());
+	    Dictionary<string, int> klassAttrs = Utils.ReadAttributes(klass.ToString());
+	    raceAttrs.TryGetValue("baseStr", out baseStr);
+	    raceAttrs.TryGetValue("baseInt", out baseInt);
+	    raceAttrs.TryGetValue("baseAgi", out baseAgi);
+	    raceAttrs.TryGetValue("baseHp", out baseHp);
+	    raceAttrs.TryGetValue("baseMp", out baseMp);
+	    klassAttrs.TryGetValue("strGain", out strGain);
+	    klassAttrs.TryGetValue("intGain", out intGain);
+	    klassAttrs.TryGetValue("agiGain", out agiGain);
+
 	}
 	
 	// Update is called once per frame
@@ -47,4 +57,4 @@ public class character : MonoBehaviour {
 
 public enum Klass {Rittari, Raiskari, Ryöväri, Runkkari};
 
-public enum Race {human, Haltija, Dwarf, Orc};
+public enum Race {Human, Haltija, Dwarf, Orc};
