@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class creature : MonoBehaviour {
+public class creature : MonoBehaviour
+{
 
-
+    public int hp;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,16 @@ public class creature : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void takeHit(int dmg)
+    {
+        hp = hp - dmg;
+    }
+
+    public int getHP()
+    {
+        return hp;
+    }
 }
 public enum CreatureKlass {Rittari, Raiskari, Ryöväri, Runkkari};
 

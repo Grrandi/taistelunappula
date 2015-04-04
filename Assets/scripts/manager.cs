@@ -4,11 +4,12 @@ using System.Collections;
 public class manager : MonoBehaviour
 {
 
-    public Transform player;
-    public Transform monster;
+    public GameObject player;
+    public GameObject monster;
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+
 	}
 	
 	// Update is called once per frame
@@ -20,8 +21,9 @@ public class manager : MonoBehaviour
     {
         if (monster == null)
         {
-            monster = Instantiate(Resources.Load("monster")) as Transform;
+            monster = Instantiate(Resources.Load("monster")) as GameObject;
         }
+
     }
 
     public void hurtPlayer()
