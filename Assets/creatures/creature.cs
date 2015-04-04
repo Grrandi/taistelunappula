@@ -21,7 +21,7 @@ public class creature : MonoBehaviour
         hp = hp - dmg;
     }
 
-    public int getHP()
+    public int getHealth()
     {
         return hp;
     }
