@@ -30,7 +30,7 @@ public static class Utils {
     public static Dictionary<string, int> ReadAttributes(string race)
     {
 //        Dictionary<string, int> dict;
-//        using (StreamReader r = new StreamReader("Assets/" + race + ".json"))
+//        using (StreamReader r = new StreamReader("Assets/" + startRace + ".json"))
 //        {
 //           string json = r.ReadToEnd();
 //        }

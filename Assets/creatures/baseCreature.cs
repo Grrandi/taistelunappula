@@ -15,13 +15,13 @@ public class baseCreature : MonoBehaviour {
     private int strGain;
     private int intGain;
 
-    public CreatureRace race;
-    public CreatureKlass klass;
+    public CreatureRace startRace;
+    public CreatureKlass startKlass;
 
 	// Use this for initialization
 	void Start () {
-	    Dictionary<string, int> raceAttrs = Utils.ReadAttributes(race.ToString());
-	    Dictionary<string, int> klassAttrs = Utils.ReadAttributes(klass.ToString());
+	    Dictionary<string, int> raceAttrs = Utils.ReadAttributes(startRace.ToString());
+	    Dictionary<string, int> klassAttrs = Utils.ReadAttributes(startKlass.ToString());
 	    raceAttrs.TryGetValue("baseStr", out baseStr);
 	    raceAttrs.TryGetValue("baseInt", out baseInt);
 	    raceAttrs.TryGetValue("baseAgi", out baseAgi);
