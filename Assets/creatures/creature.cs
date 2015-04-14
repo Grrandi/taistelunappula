@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class creature : MonoBehaviour
+public class creature : baseCreature
 {
 
     public int hp;
@@ -26,6 +26,3 @@ public class creature : MonoBehaviour
         return hp;
     }
 }
-public enum CreatureKlass {Rittari, Raiskari, Ryöväri, Runkkari};
-
-public enum CreatureRace {Human, Haltija, Dwarf, Orc};
