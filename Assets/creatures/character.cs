@@ -1,14 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class character : baseCreature
 {
 
-    private int hp;
-    private int mp;
-
-    public int level = 1;
     public int experienceTotal = 0;
     public int experienceToNextLevel;
 
@@ -29,10 +26,7 @@ public class character : baseCreature
 	// Use this for initialization
 	void Start ()
 	{
-	    hp = baseHp;
-	    mp = baseMp;
 	    experienceChart.TryGetValue(2, out experienceToNextLevel);
-
 	}
 	
 	// Update is called once per frame
@@ -76,4 +70,5 @@ public class character : baseCreature
         // tähän pitäisi laskea sit int/agi/str gainin perusteella suurentuneet statsit
         experienceChart.TryGetValue(level+1, out experienceToNextLevel);
     }
+
 }

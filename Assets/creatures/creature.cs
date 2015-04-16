@@ -5,7 +5,6 @@ using System.Collections;
 public class creature : baseCreature
 {
 
-    public int hp;
 
 	// Use this for initialization
 	void Start ()
@@ -24,13 +23,4 @@ public class creature : baseCreature
 	
 	}
 
-    public void takeHit(int dmg)
-    {
-        hp = hp - dmg;
-    }
-
-    public int getHealth()
-    {
-        return hp;
-    }
 }

@@ -39,10 +39,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243527330355b1640b5c59bee0e0068b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 60
   baseHp: 10
   baseMp: 50
-  starting_race: 3
-  starting_klass: 0
+  startRace: 0
+  startKlass: 0
+  experienceTotal: 0
+  experienceToNextLevel: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

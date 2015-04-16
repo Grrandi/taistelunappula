@@ -41,8 +41,9 @@ public class manager : MonoBehaviour
         playerScript.earnExp(amount);
     }
 
-    public void hurtPlayer()
+    public void hurtPlayer(int dmg)
     {
+        playerScript.takeHit(dmg);
 
     }
 
@@ -56,5 +57,20 @@ public class manager : MonoBehaviour
         {
             killMonster();
         }
+    }
+
+    public void doAttack()
+    {
+        var playerDmg = playerScript.getDmg();
+        var creatureDmg = 0;
+        if (monsterScript != null)
+        {
+            creatureDmg = monsterScript.getDmg();
+        }
+        Debug.Log("player dmg:" + playerDmg);
+        Debug.Log("monster dmg:" + creatureDmg);
+
+        hurtPlayer(creatureDmg);
+        hurtMonster(creatureDmg);
     }
 }

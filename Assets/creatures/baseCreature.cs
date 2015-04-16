@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,6 +8,9 @@ public class baseCreature : MonoBehaviour {
     protected int baseStr;
     protected int baseInt;
     protected int baseAgi;
+    public int level = 1;
+    public int hp;
+
 
     public int baseHp = 10;
     public int baseMp = 50;
@@ -37,6 +41,20 @@ public class baseCreature : MonoBehaviour {
 	void Update () {
 	
 	}
+    public int getDmg()
+    {
+        return (int)Math.Ceiling(level*3.238);
+    }
+    public void takeHit(int dmg)
+    {
+        hp = hp - dmg;
+    }
+
+    public int getHealth()
+    {
+        return hp;
+    }
+
 }
 public enum CreatureKlass {Rittari, Raiskari, Ryöväri, Runkkari};
 
