@@ -61,16 +61,25 @@ public class manager : MonoBehaviour
 
     public void doAttack()
     {
-        var playerDmg = playerScript.getDmg();
+
         var creatureDmg = 0;
         if (monsterScript != null)
         {
             creatureDmg = monsterScript.getDmg();
         }
-        Debug.Log("player dmg:" + playerDmg);
         Debug.Log("monster dmg:" + creatureDmg);
-
         hurtPlayer(creatureDmg);
-        hurtMonster(creatureDmg);
+
+        if (playerScript.getHealth() < 20)
+        {
+            playerScript.heal();
+        }
+        else
+        {
+            var playerDmg = playerScript.getDmg();
+            hurtMonster(creatureDmg);
+            Debug.Log("player dmg:" + playerDmg);
+        }
+
     }
 }

@@ -64,6 +64,13 @@ public class character : baseCreature
 
     }
 
+    public void heal()
+    {
+        double amount = baseInt*3.234 + 20;
+        hp = (int)(hp + amount);
+        Debug.Log("Healing player for: " + amount);
+    }
+
     private void ding()
     {
         level++;
